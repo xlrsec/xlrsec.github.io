@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - XLR</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica', sans-serif;
+            background: url('https://github.com/hackerxlr/hackerxlr.github.io/blob/main/about.jpg?raw=true') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            max-width: 800px; /* Adjust as per your content width */
+            margin: 20px auto; /* Center the container horizontally */
+            margin-top: 100px; /* Adjust the top margin to push content down */
+        }
+
+        .container h1 {
+            font-size: 50px;
+            margin: 0;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .container p {
+            font-size: 20px;
+            margin: 15px 0 20px;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        .project-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .feature p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #fff;
+        }
+
+        .menu-icon {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .menu.open {
+            display: flex;
+        }
+
+        .menu-panel {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            max-width: 80%;
+            max-height: 80%;
+            overflow: auto;
+            margin-top: 50px; /* Adjust the top margin to position it lower */
+        }
+
+        .menu-item {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #fff;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .menu-item:hover {
+            color: #0072ff;
+        }
+
+        nav {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            margin: 0 20px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #0072ff;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            text-align: center;
+            padding: 15px 0;
+            font-size: 14px;
+            color: #fff;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40px" height="40px" fill="#fff">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+    </div>
+    <div class="menu" id="menu">
+        <div class="menu-panel">
+            <div class="menu-item">Feature Coming Soon</div>
+            <div class="menu-item">Feature Coming Soon</div>
+            <div class="menu-item">Feature Coming Soon</div>
+            <!-- Add more menu items as needed -->
+        </div>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <h1>Projects By PankajKrYadav</h1>
+        <p>
+            The Hackerxlr Projects are under devlopment. And and there projects are going to be published on github as well as this platform too.
+        </p>
+        <div class="project-features">
+            <div class="feature">
+                <h3>Feature Recon</h3>
+                <p>Hackerxlr undevlopment for project for basic Reconassiance </p>
+            </div>
+            <div class="feature">
+                <h3>Feature Enum</h3>
+                <p>Hackerxlr underdevlopment project for enumeration </p>
+            </div>
+            <div class="feature">
+                <h3>Feature Server Side</h3>
+                <p>Hackerxlr underdevelopment project for Server Side Vulnerablities </p>
+            </div>
+            <!-- Add more features as needed -->
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 XLR. All rights reserved.
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Pankaj Kr Yadav</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica', sans-serif;
+            background: url('https://github.com/hackerxlr/hackerxlr.github.io/blob/main/about.jpg?raw=true') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .container h1 {
+            font-size: 70px;
+            margin: 0;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .container p {
+            font-size: 24px;
+            margin: 15px 0 20px;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            transition: transform 0.3s;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-icons a i {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.1);
+        }
+
+        nav {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            margin: 0 20px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #0072ff;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            text-align: center;
+            padding: 15px 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        footer p a {
+            color: #0072ff;
+            text-decoration: none;
+        }
+
+        footer p a:hover {
+            text-decoration: underline;
+        }
+
+        .blog-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: left;
+        }
+
+        .blog-post {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        .blog-post h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .blog-post p {
+            margin: 0;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .write-blog {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .write-blog textarea {
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .write-blog button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            background: #0072ff;
+            color: #fff;
+        }
+
+        .write-blog input[type="password"] {
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KD4JG55" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="project.html">Projects</a>
+        <a href="readme.html">Readme</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>Readme</h1>
+        <p>Read the latest updates and articles.</p>
+
+        <div class="blog-section" id="blog-section">
+            <!-- Blog posts will be inserted here -->
+        </div>
+
+        <div class="write-blog" id="write-blog">
+            <input type="password" id="password" placeholder="Enter password">
+            <textarea id="blog-title" placeholder="Blog Title"></textarea>
+            <textarea id="blog-content" placeholder="Write your blog here..."></textarea>
+            <button onclick="postBlog()">Post Blog</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Evolving. All rights reserved. | Designed by <a href="https://github.com/hackerxlr" target="_blank">XLR</a></p>
+    </footer>
+
+    <script>
+        const passwordField = document.getElementById('password');
+        const writeBlogSection = document.getElementById('write-blog');
+        const blogSection = document.getElementById('blog-section');
+
+        passwordField.addEventListener('input', () => {
+            if (passwordField.value === 'bdjx3itt7k') {
+                writeBlogSection.style.display = 'flex';
+                passwordField.style.display = 'none';
+            }
+        });
+
+        function postBlog() {
+            const title = document.getElementById('blog-title').value;
+            const content = document.getElementById('blog-content').value;
+
+            if (title && content) {
+                const blogPost = document.createElement('div');
+                blogPost.className = 'blog-post';
+                blogPost.innerHTML = `<h2>${title}</h2><p>${content}</p>`;
+                blogSection.appendChild(blogPost);
+
+                // Clear the input fields
+                document.getElementById('blog-title').value = '';
+                document.getElementById('blog-content').value = '';
+            } else {
+                alert('Please fill in both the title and content.');
+            }
+        }
+
+        // Example blog post
+        const exampleBlogPost = `
+            <div class="blog-post">
+                <h2> For BugHunters</h2>
+                <h2>Who is this post for?
+                    
+                    </h2>
+<p>Like the hacking culture, heard and know about bug bounties.
+Amazed that top hackers are making quite a lot of money and really curious.
+Interested in bug bounties but not really quite sure if it’s worth the dive.
+Not really sure where to start or which way to go.
+Looking for good content that will actually help with progression of bug bounties.
+
+</p>
+
+<h3>Disclaimer
+    
+    </h3>
+
+<h3>My personal experience
+
+
+    </h3>
+<p> I am not a top hacker, and I am definitely not saying that the resources I recommend are going to make you a hacker millionaire.</p>
+
+<p>The point of this post is to give you some good resources that might make the bug bounty journey easier. Especially for people starting with little IT experience, it can be very intimidating. These are resources that I would recommend to my past self.
+Is bug bounties worth the dive?</p>
+
+<h3>Who it’s not for</h3>
+<p>1)  More emphasis on secureness with a normal job.</p>  <p></p>
+<p>2)  Just expecting to make quick money fast with little effort (unless you have decades of IT experience or a genius, and if you think yourself as a genius, most likely not).
+    Expecting to become super rich fast.</p><p></p>
+<p>3)  Not that interested in hacking systems, more interested in social interactions.</p><hp></p>
+            </div>
+        `;
+
+        blogSection.innerHTML = exampleBlogPost;
+    </script>
+</body>
+</html>
